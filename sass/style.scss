@@ -1,0 +1,68 @@
+* {
+	border: 1px solid red;
+	box-sizing: border-box;
+}
+%body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	@extend %body;
+	height: 100vh;
+}
+h1, h2, h3, p {
+	@extend %body;
+	text-align: center;
+}
+h1 {
+	line-height: 50px;
+}
+h2 {
+	line-height: 25px;
+}
+h3 {
+	line-height: 50px;
+}
+p {
+	margin: 0 auto;
+	width: 100px;
+	border-radius: 5px;
+	line-height: 20px;
+	&:hover {
+		background-color: green;
+		cursor: pointer;
+	}
+}
+section.container {
+		width: 100%;
+
+}
+.value {
+	float: left;
+}
+.readings {
+	.value {
+		width: 25%;
+		div {
+			height: 50px;
+		}
+	}
+
+}
+.setup {
+	.value {
+		width: 33.33%;
+		div:first-of-type {
+			height: 50px;
+		}
+	}
+}
+.output {
+	.value {
+		width: 50%;
+		div {
+			height: 200px;
+			overflow-y: auto;
+		}
+	}
+}
